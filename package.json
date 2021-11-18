@@ -1,0 +1,31 @@
+{
+  "name": "scratchools",
+  "version": "1.0.0",
+  "description": "This is a collection of additional command line tools to manage a salesforce scratch org.",
+  "main": "bin/index.js",
+  "type": "module",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliverAHolmes/scratchtools.git"
+  },
+  "keywords": [
+    "salesforce"
+  ],
+  "author": "Oliver Holmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OliverAHolmes/scratchtools/issues"
+  },
+  "homepage": "https://github.com/OliverAHolmes/scratchtools#readme",
+  "dependencies": {
+    "open": "^8.4.0",
+    "shelljs": "^0.8.4",
+    "yargs": "^17.2.1"
+  },
+  "bin": {
+    "scratchools": "./bin/index.js"
+  }
+}
