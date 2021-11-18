@@ -1,5 +1,5 @@
 {
-  "name": "scratctools",
+  "name": "scratchtools",
   "version": "1.0.0",
   "description": "This is a collection of additional command line tools to manage a salesforce scratch org.",
   "main": "bin/index.js",
@@ -26,6 +26,6 @@
     "yargs": "^17.2.1"
   },
   "bin": {
-    "scratctools": "./bin/index.js"
+    "scratchtools": "./bin/index.js"
   }
 }
