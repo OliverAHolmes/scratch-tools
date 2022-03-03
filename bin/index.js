@@ -25,7 +25,7 @@ args.command({
         }
         
     }
-},{
+}).command({
     command: 'getauthurl',
     describe: 'Gets an auth url to auto login to a scratch org.',
     builder: {
@@ -38,10 +38,10 @@ args.command({
     handler({dir}) {
         if(dir){
             console.log('Attaining link for: ' + dir);
-            getOrgAuthUrl(dir);
+            console.log(getOrgAuthUrl(dir));
         }else{
             console.log('Attaining link for org in this directory.');
-            getOrgAuthUrl();
+            console.log(getOrgAuthUrl());
         }
         
     }
