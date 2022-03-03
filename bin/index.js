@@ -3,8 +3,6 @@ import yargs from 'yargs';
 import openGoogleCalLink from './gen-google-cal-link.js';
 import getOrgAuthUrl from './get-org-auth-url.js';
 
-console.log(getOrgAuthUrl('../lumary-core/'));
-
 const args = yargs();
 
 args.command({
