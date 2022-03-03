@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 import yargs from 'yargs'; 
 import openGoogleCalLink from './gen-google-cal-link.js';
+import getOrgAuthUrl from './get-org-auth-url.js';
+
+console.log(getOrgAuthUrl('../lumary-core/'));
 
 const args = yargs();
 
@@ -24,6 +27,26 @@ args.command({
         }
         
     }
-})
+},{
+    command: 'getauthurl',
+    describe: 'Gets an auth url to auto login to a scratch org.',
+    builder: {
+        dir: {
+            describe: 'Directory to Scratch Org.',
+            demandOption: false,
+            type: "string"
+          }
+    },
+    handler({dir}) {
+        if(dir){
+            console.log('Attaining link for: ' + dir);
+            getOrgAuthUrl(dir);
+        }else{
+            console.log('Attaining link for org in this directory.');
+            getOrgAuthUrl();
+        }
+        
+    }
+});
 
 args.parse(process.argv.slice(2));
